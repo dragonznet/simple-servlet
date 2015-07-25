@@ -17,7 +17,15 @@ public class HelloServlet implements Servlet {
         System.out.println("service()");
 
         PrintWriter out = servletResponse.getWriter();
-        out.println("Hello World!");
+        out.println("<html>\n");
+        out.println("<head>\n");
+        out.println("<title>Hello World!</title>\n");
+        out.println("</head>\n");
+        out.println("<body>\n");
+        out.println("<h1>Hello World!</h1>\n");
+        out.println("<p>This is the start of the java server.</p>\n");
+        out.println("</body>\n");
+        out.println("<html>\n");
     }
 
     public String getServletInfo() {

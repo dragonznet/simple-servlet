@@ -29,24 +29,12 @@
     </dependencies>
 
     <build>
-        <finalName>${pom.artifactId}</finalName>
         <plugins>
             <!-- Jetty plucgin -->
             <!-- Run project on Jetty at localhost using "mvn jetty:run" -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
-
-                <configuration>
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
-                    <scanTargets>
-                        <scanTarget>${project.basedir}/src/main</scanTarget>
-                        <scanTarget>${project.basedir}/src/test</scanTarget>
-                    </scanTargets>
-                    <webAppConfig>
-                        <contextPath>/${artifactId}</contextPath>
-                    </webAppConfig>
-                </configuration>
             </plugin>
         </plugins>
     </build>
